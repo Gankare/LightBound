@@ -279,6 +279,7 @@ public class FirstPersonController : MonoBehaviour
         #region Sprint
         if (enableSprint)
         {
+            //bool hasMovementInput = Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.1f || Mathf.Abs(Input.GetAxisRaw("Vertical")) > 0.1f;
             if (isSprinting && !isCrouched) // prevent sprinting if crouched
             {
                 isZoomed = false;
@@ -406,8 +407,9 @@ float regenRate = isCrouched ? 2f : 1f;
                 inputDir.Normalize();
 
             // --- Pick speed ---
+            bool hasMovementInput = Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.1f || Mathf.Abs(Input.GetAxisRaw("Vertical")) > 0.1f;
             float speed = walkSpeed;
-            if (enableSprint && Input.GetKey(sprintKey) && sprintRemaining > 0f && !isSprintCooldown && !isCrouched)
+            if (enableSprint && Input.GetKey(sprintKey) && sprintRemaining > 0f && !isSprintCooldown && !isCrouched && hasMovementInput)
             {
                 speed = sprintSpeed;
                 isSprinting = true;
