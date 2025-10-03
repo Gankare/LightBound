@@ -462,9 +462,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -44.932
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7e8b8ce0bbbf0274096c89fffe10a06d, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5215299815803115452, guid: 7e8b8ce0bbbf0274096c89fffe10a06d, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1429365040431186719, guid: 7e8b8ce0bbbf0274096c89fffe10a06d, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 236216658851537685, guid: 7e8b8ce0bbbf0274096c89fffe10a06d, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7e8b8ce0bbbf0274096c89fffe10a06d, type: 3}
       propertyPath: m_Name
       value: DoubleBarrelShotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 2668850849275912188, guid: 7e8b8ce0bbbf0274096c89fffe10a06d, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1531,7 +1551,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -1624,22 +1644,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &3167034990610913805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8108740199441892553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 970e814ab77ad5b43a2431b138d21f94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickupKey: 101
-  weaponMount: {fileID: 0}
-  mountLocalPosition: {x: 0, y: 0, z: 0}
-  mountLocalEuler: {x: 0, y: 0, z: 0}
 --- !u!1 &3332348524678860330
 GameObject:
   m_ObjectHideFlags: 0
@@ -2252,7 +2256,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -2547,7 +2551,7 @@ Transform:
   m_GameObject: {fileID: 8108740199441892553}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 13.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3206,6 +3210,7 @@ MonoBehaviour:
   playerCanMove: 1
   walkSpeed: 3
   maxVelocityChange: 10
+  animator: {fileID: 5866666021023879908}
   enableSprint: 1
   unlimitedSprint: 1
   sprintKey: 304
@@ -3220,10 +3225,10 @@ MonoBehaviour:
   sprintBar: {fileID: 8944221779349975766}
   sprintBarWidthPercent: 0.3
   sprintBarHeightPercent: 0.02
-  enableJump: 1
+  enableJump: 0
   jumpKey: 32
   jumpPower: 7
-  enableCrouch: 1
+  enableCrouch: 0
   holdToCrouch: 1
   crouchKey: 306
   crouchHeight: 0.75
@@ -3493,7 +3498,6 @@ GameObject:
   - component: {fileID: 8503982245472655170}
   - component: {fileID: 3772821166755386317}
   - component: {fileID: 7240984394852964789}
-  - component: {fileID: 3167034990610913805}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player

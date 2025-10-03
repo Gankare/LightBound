@@ -8,9 +8,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Unity.VisualScripting;
+
 
 #if UNITY_EDITOR
-    using UnityEditor;
+using UnityEditor;
     using System.Net;
 #endif
 
@@ -61,6 +63,8 @@ public class FirstPersonController : MonoBehaviour
 
     // Internal Variables
     private bool isWalking = false;
+
+    public Animator animator;
 
     #region Sprint
 
@@ -283,7 +287,7 @@ public class FirstPersonController : MonoBehaviour
                     sprintFOV,
                     sprintFOVStepTime * Time.deltaTime
                 );
-
+                animator.SetBool("Sprint", true);
                 // Drain sprint remaining while sprinting
                 if (!unlimitedSprint)
                 {
@@ -297,6 +301,7 @@ public class FirstPersonController : MonoBehaviour
             }
             else
             {
+                animator.SetBool("Sprint", false);
                 isSprinting = false;
                 // Faster regen if crouched
 float regenRate = isCrouched ? 2f : 1f;
@@ -626,7 +631,8 @@ float regenRate = isCrouched ? 2f : 1f;
         EditorGUILayout.Space();
 
         fpc.playerCanMove = EditorGUILayout.ToggleLeft(new GUIContent("Enable Player Movement", "Determines if the player is allowed to move."), fpc.playerCanMove);
-
+        
+        fpc.animator = (Animator)EditorGUILayout.ObjectField(new GUIContent("Animator", "Animator component for animations."), fpc.animator, typeof(Animator),true);
         GUI.enabled = fpc.playerCanMove;
         fpc.walkSpeed = EditorGUILayout.Slider(new GUIContent("Walk Speed", "Determines how fast the player will move while walking."), fpc.walkSpeed, .1f, fpc.sprintSpeed);
         GUI.enabled = true;
