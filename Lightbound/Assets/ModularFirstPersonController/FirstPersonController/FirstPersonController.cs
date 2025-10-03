@@ -298,9 +298,13 @@ public class FirstPersonController : MonoBehaviour
             else
             {
                 isSprinting = false;
-
+                playerCamera.fieldOfView = Mathf.Lerp(
+                    playerCamera.fieldOfView,
+                    60f,   
+                    sprintFOVStepTime * Time.deltaTime
+                );
                 // Faster regen if crouched
-                float regenRate = isCrouched ? 2f : 1f;
+float regenRate = isCrouched ? 2f : 1f;
                 sprintRemaining = Mathf.Clamp(
                     sprintRemaining + regenRate * Time.deltaTime,
                     0,
