@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 
-[RequireComponent(typeof(AudioSource))]
 public class DoubleBarrelShotgun : MonoBehaviour
 {
     [Header("References")]
@@ -34,13 +33,12 @@ public class DoubleBarrelShotgun : MonoBehaviour
     private int currentAmmo;                // shells in magazine
     private bool isReloading = false;
     private float lastFireTime = -10f;
-    private AudioSource audioSource;
+    public AudioSource audioSource;
     private int nextBarrel = 0;             // 0 = left, 1 = right
     private float currentRecoil = 0f;
 
     void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
         if (fpsCamera == null && Camera.main != null) fpsCamera = Camera.main;
     }
 
@@ -180,7 +178,11 @@ public class DoubleBarrelShotgun : MonoBehaviour
         isReloading = true;
 
         if (animator != null) animator.SetTrigger("Reload");
-        if (reloadSound != null) audioSource.PlayOneShot(reloadSound);
+        if (reloadSound != null)
+        {
+            yield return new WaitForSeconds(0.8f);
+            audioSource.PlayOneShot(reloadSound);
+        }
 
         yield return new WaitForSeconds(reloadTime);
 
