@@ -466,6 +466,18 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6985329673527284994, guid: 7e8b8ce0bbbf0274096c89fffe10a06d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0306
+      objectReference: {fileID: 0}
+    - target: {fileID: -6985329673527284994, guid: 7e8b8ce0bbbf0274096c89fffe10a06d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0344
+      objectReference: {fileID: 0}
+    - target: {fileID: -6985329673527284994, guid: 7e8b8ce0bbbf0274096c89fffe10a06d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0418
+      objectReference: {fileID: 0}
     - target: {fileID: -5215299815803115452, guid: 7e8b8ce0bbbf0274096c89fffe10a06d, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -485,6 +497,10 @@ PrefabInstance:
     - target: {fileID: 2668850849275912188, guid: 7e8b8ce0bbbf0274096c89fffe10a06d, type: 3}
       propertyPath: m_CastShadows
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6619225641134156614, guid: 7e8b8ce0bbbf0274096c89fffe10a06d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
