@@ -298,11 +298,6 @@ public class FirstPersonController : MonoBehaviour
             else
             {
                 isSprinting = false;
-                playerCamera.fieldOfView = Mathf.Lerp(
-                    playerCamera.fieldOfView,
-                    60f,   
-                    sprintFOVStepTime * Time.deltaTime
-                );
                 // Faster regen if crouched
 float regenRate = isCrouched ? 2f : 1f;
                 sprintRemaining = Mathf.Clamp(
@@ -447,6 +442,11 @@ float regenRate = isCrouched ? 2f : 1f;
             {
                 if (hideBarWhenFull && sprintRemaining == sprintDuration)
                     sprintBarCG.alpha -= 3 * Time.deltaTime;
+                playerCamera.fieldOfView = Mathf.Lerp(
+                    playerCamera.fieldOfView,
+                    60f,
+                    sprintFOVStepTime * Time.deltaTime
+                );
             }
         }
 
@@ -495,7 +495,6 @@ float regenRate = isCrouched ? 2f : 1f;
         {
             transform.localScale = new Vector3(originalScale.x, originalScale.y, originalScale.z);
             walkSpeed /= speedReduction;
-
             isCrouched = false;
         }
         // Crouches player down to set height
