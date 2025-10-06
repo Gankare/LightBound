@@ -276,6 +276,9 @@ public class FirstPersonController : MonoBehaviour
         #endregion
         #endregion
 
+        bool isMoving = Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0;
+        animator.SetBool("Moving", isMoving);
+
         #region Sprint
         if (enableSprint)
         {
