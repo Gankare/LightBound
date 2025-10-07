@@ -1418,6 +1418,38 @@ ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 7980029976762078213, guid: 1f58a1dea6bbd9347843e4935585e6a2, type: 3}
   m_PrefabInstance: {fileID: 1446746619}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1474337955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1474337956}
+  m_Layer: 0
+  m_Name: CameraHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1474337956
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474337955}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4853301110183773882}
+  m_Father: {fileID: 248144885704605738}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1572325883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1871,7 +1903,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4853301110183773882}
+  - {fileID: 1474337956}
   m_Father: {fileID: 5599487907613017581}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!222 &279635107271376613
@@ -4424,7 +4456,7 @@ Transform:
   - {fileID: 5667961298178785336}
   - {fileID: 543450652706490526}
   - {fileID: 715077275}
-  m_Father: {fileID: 248144885704605738}
+  m_Father: {fileID: 1474337956}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5022598228233187898
 GameObject:
@@ -6498,6 +6530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 612dd93cda2600049ae6dfb91091256b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraHolder: {fileID: 1474337956}
   fpsCamera: {fileID: 1434453582551863952}
   leftMuzzle: {fileID: 609790965}
   rightMuzzle: {fileID: 782633883}
@@ -6507,6 +6540,7 @@ MonoBehaviour:
   fireSound: {fileID: 8300000, guid: 5af5cc303e05b5c49a1348bb06f5a988, type: 3}
   reloadSound: {fileID: 8300000, guid: 30bc62d58a96c8f4ba0b98d582c41811, type: 3}
   animator: {fileID: 715077281}
+  controller: {fileID: 7240984394852964789}
   magazineSize: 2
   unlimitedReserve: 1
   reserveAmmo: 16

@@ -24,6 +24,7 @@ public class FirstPersonController : MonoBehaviour
 
     public Camera playerCamera;
 
+    private float recoilOffset = 3f;
     public float fov = 60f;
     public bool invertCamera = false;
     public bool cameraCanMove = true;
@@ -208,7 +209,10 @@ public class FirstPersonController : MonoBehaviour
     }
 
     float camRotation;
-
+    public void AddRecoil(float amount)
+    {
+        recoilOffset += amount;
+    }
     private void Update()
     {
         #region Camera
@@ -229,6 +233,11 @@ public class FirstPersonController : MonoBehaviour
             }
 
             // Clamp pitch between lookAngle
+            if (recoilOffset != 0f)
+            {
+                pitch -= recoilOffset; // tilt camera upward
+                recoilOffset = 0f;     // reset (instant recoil)
+            }
             pitch = Mathf.Clamp(pitch, -maxLookAngle, maxLookAngle);
 
             transform.localEulerAngles = new Vector3(0, yaw, 0);
