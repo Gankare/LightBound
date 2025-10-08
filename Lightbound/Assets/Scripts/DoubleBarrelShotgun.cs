@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class DoubleBarrelShotgun : MonoBehaviour
 {
     [Header("References")]
-    public Transform cameraHolder;  // 🔧 New: a pivot for camera recoil
+    public Transform cameraHolder;  
     public Camera fpsCamera;
     public Transform leftMuzzle;
     public Transform rightMuzzle;
@@ -15,8 +16,7 @@ public class DoubleBarrelShotgun : MonoBehaviour
     public AudioClip fireSound;
     public AudioClip reloadSound;
     public Animator animator;
-    public FirstPersonController controller;
-
+    public CinemachineImpulseSource impulseSource;
     [Header("Shotgun Settings")]
     public int magazineSize = 2;
     public bool unlimitedReserve = true;
@@ -170,10 +170,7 @@ public class DoubleBarrelShotgun : MonoBehaviour
 
     private void ApplyRecoil()
     {
-        if (controller != null)
-        {
-            controller.AddRecoil(recoilAmount);
-        }
+        impulseSource.GenerateImpulse();
     }
 
     IEnumerator Reload()

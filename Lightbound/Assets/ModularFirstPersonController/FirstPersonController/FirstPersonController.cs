@@ -40,7 +40,7 @@ public class FirstPersonController : MonoBehaviour
     // Internal Variables
     private float yaw = 0.0f;
     private float pitch = 0.0f;
-    private Image crosshairObject;
+    //private Image crosshairObject;
 
     #region Camera Zoom Variables
 
@@ -87,7 +87,7 @@ public class FirstPersonController : MonoBehaviour
     public float sprintBarHeightPercent = .015f;
 
     // Internal Variables
-    private CanvasGroup sprintBarCG;
+    //private CanvasGroup sprintBarCG;
     private bool isSprinting = false;
     private float sprintRemaining;
     private float sprintBarWidth;
@@ -140,7 +140,7 @@ public class FirstPersonController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
 
-        crosshairObject = GetComponentInChildren<Image>();
+        //crosshairObject = GetComponentInChildren<Image>();
 
         // Set internal variables
         playerCamera.fieldOfView = fov;
@@ -168,17 +168,17 @@ public class FirstPersonController : MonoBehaviour
         }
         if (crosshair)
         {
-            crosshairObject.sprite = crosshairImage;
-            crosshairObject.color = crosshairColor;
+            //crosshairObject.sprite = crosshairImage;
+            //crosshairObject.color = crosshairColor;
         }
         else
         {
-            crosshairObject.gameObject.SetActive(false);
+            //crosshairObject.gameObject.SetActive(false);
         }
 
         #region Sprint Bar
 
-        sprintBarCG = GetComponentInChildren<CanvasGroup>();
+        //sprintBarCG = GetComponentInChildren<CanvasGroup>();
 
         if(useSprintBar)
         {
@@ -196,7 +196,7 @@ public class FirstPersonController : MonoBehaviour
 
             if(hideBarWhenFull)
             {
-                sprintBarCG.alpha = 0;
+                //sprintBarCG.alpha = 0;
             }
         }
         else
@@ -208,11 +208,6 @@ public class FirstPersonController : MonoBehaviour
         #endregion
     }
 
-    float camRotation;
-    public void AddRecoil(float amount)
-    {
-        recoilOffset += amount;
-    }
     private void Update()
     {
         #region Camera
@@ -230,13 +225,6 @@ public class FirstPersonController : MonoBehaviour
             {
                 // Inverted Y
                 pitch += mouseSensitivity * Input.GetAxis("Mouse Y");
-            }
-
-            // Clamp pitch between lookAngle
-            if (recoilOffset != 0f)
-            {
-                pitch -= recoilOffset; // tilt camera upward
-                recoilOffset = 0f;     // reset (instant recoil)
             }
             pitch = Mathf.Clamp(pitch, -maxLookAngle, maxLookAngle);
 
@@ -459,13 +447,13 @@ float regenRate = isCrouched ? 2f : 1f;
             {
                 if (isCrouched) Crouch();
 
-                if (hideBarWhenFull && !unlimitedSprint)
-                    sprintBarCG.alpha += 5 * Time.deltaTime;
+                //if (hideBarWhenFull && !unlimitedSprint)
+                    //sprintBarCG.alpha += 5 * Time.deltaTime;
             }
             else
             {
-                if (hideBarWhenFull && sprintRemaining == sprintDuration)
-                    sprintBarCG.alpha -= 3 * Time.deltaTime;
+                //if (hideBarWhenFull && sprintRemaining == sprintDuration)
+                    //sprintBarCG.alpha -= 3 * Time.deltaTime;
                 playerCamera.fieldOfView = Mathf.Lerp(
                     playerCamera.fieldOfView,
                     60f,
