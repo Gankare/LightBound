@@ -621,8 +621,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 612dd93cda2600049ae6dfb91091256b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraHolder: {fileID: 4853301110183773882}
-  fpsCamera: {fileID: 1434453582551863952}
   leftMuzzle: {fileID: 609790965}
   rightMuzzle: {fileID: 782633883}
   muzzleFlashLeft: {fileID: 1307852908}
@@ -632,6 +630,7 @@ MonoBehaviour:
   reloadSound: {fileID: 8300000, guid: 30bc62d58a96c8f4ba0b98d582c41811, type: 3}
   animator: {fileID: 715077281}
   impulseSource: {fileID: 715077285}
+  audioSource: {fileID: 715077278}
   magazineSize: 2
   unlimitedReserve: 1
   reserveAmmo: 16
@@ -641,9 +640,6 @@ MonoBehaviour:
   damagePerPellet: 6
   pelletsPerShot: 8
   spreadAngle: 10
-  recoilAmount: 16.87
-  recoilRecoverSpeed: 6
-  audioSource: {fileID: 715077278}
 --- !u!114 &715077285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2464,7 +2460,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 1
 --- !u!114 &3829770852333656519
 MonoBehaviour:
@@ -3379,13 +3375,8 @@ MonoBehaviour:
   maxLookAngle: 50
   lockCursor: 1
   crosshair: 1
-  crosshairImage: {fileID: 21300000, guid: be4ce60e2c9768c44b9b10b9c5258045, type: 3}
+  crosshairImage: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   crosshairColor: {r: 1, g: 1, b: 1, a: 1}
-  enableZoom: 0
-  holdToZoom: 1
-  zoomKey: 324
-  zoomFOV: 30
-  zoomStepTime: 5
   playerCanMove: 1
   walkSpeed: 3
   maxVelocityChange: 10
@@ -3396,14 +3387,8 @@ MonoBehaviour:
   sprintSpeed: 5
   sprintDuration: 5
   sprintCooldown: 0.5
-  sprintFOV: 60
+  sprintFOV: 80
   sprintFOVStepTime: 10
-  useSprintBar: 0
-  hideBarWhenFull: 1
-  sprintBarBG: {fileID: 3520156738926216436}
-  sprintBar: {fileID: 8944221779349975766}
-  sprintBarWidthPercent: 0.3
-  sprintBarHeightPercent: 0.02
   enableJump: 0
   jumpKey: 32
   jumpPower: 7
