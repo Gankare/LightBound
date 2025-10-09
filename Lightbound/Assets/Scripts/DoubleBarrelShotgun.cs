@@ -53,7 +53,7 @@ public class DoubleBarrelShotgun : MonoBehaviour
     void Awake()
     {
         if (fpsCamera == null && Camera.main != null) fpsCamera = Camera.main;
-        if (cameraHolder == null && fpsCamera != null) cameraHolder = fpsCamera.transform; // fallback
+        if (cameraHolder == null && fpsCamera != null) cameraHolder = fpsCamera.transform; 
     }
 
     void Start()
@@ -65,7 +65,7 @@ public class DoubleBarrelShotgun : MonoBehaviour
     {
         if (isReloading) return;
 
-        if ((Input.GetButtonDown("Fire1") || Input.GetMouseButtonDown(0)) && Time.time - lastFireTime >= fireRate)
+        if ((Input.GetButtonDown("Fire1") || Input.GetMouseButtonDown(0)) && Time.time - lastFireTime >= fireRate && Time.time > 1)
         {
             TryFire();
         }
