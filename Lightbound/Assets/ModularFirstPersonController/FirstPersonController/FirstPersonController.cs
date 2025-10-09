@@ -4,16 +4,14 @@
 //
 // "Enable/Disable Headbob, Changed look rotations - should result in reduced camera jitters" || version 1.0.1
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Unity.VisualScripting;
+
+
 
 
 #if UNITY_EDITOR
 using UnityEditor;
-using System.Net;
 #endif
 
 public class FirstPersonController : MonoBehaviour
@@ -33,6 +31,7 @@ public class FirstPersonController : MonoBehaviour
     public bool lockCursor = true;
     public bool crosshair = true;
     public Sprite crosshairImage;
+    private Image crosshairObject;
     public Color crosshairColor = Color.white;
 
     #endregion
@@ -111,7 +110,9 @@ public class FirstPersonController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        //crosshairObject = GetComponentInChildren<Image>();
+        crosshairObject = GetComponentInChildren<Image>();
+        crosshairObject.sprite = crosshairImage;
+        crosshairObject.color = crosshairColor;
         playerCamera.fieldOfView = fov;
         originalScale = transform.localScale;
         jointOriginalPos = joint.localPosition;
