@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
     [Header("Death FX")]
     [Tooltip("Optional death effect (particle prefab).")]
     public GameObject deathEffect;
+    public GameObject deathSound;
 
     public void TakeDamage(float damagePerPellet)
     {
@@ -35,6 +36,8 @@ public class Health : MonoBehaviour
             Vector3 spawnPos = transform.position + Vector3.up * 1f;
             Quaternion uprightRotation = Quaternion.LookRotation(Vector3.up); // face upward
             GameObject fx = Instantiate(deathEffect, spawnPos, uprightRotation);
+            GameObject sx = Instantiate(deathSound, spawnPos, uprightRotation);
+            Destroy(fx, 1f);
         }
         Destroy(gameObject);
     }
