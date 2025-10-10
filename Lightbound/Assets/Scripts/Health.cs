@@ -37,7 +37,7 @@ public class Health : MonoBehaviour
             Quaternion uprightRotation = Quaternion.LookRotation(Vector3.up); // face upward
             GameObject fx = Instantiate(deathEffect, spawnPos, uprightRotation);
             GameObject sx = Instantiate(deathSound, spawnPos, uprightRotation);
-            Destroy(fx, 1f);
+            Destroy(sx, 1f);
         }
         Destroy(gameObject);
     }
