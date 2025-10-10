@@ -114,12 +114,12 @@ public class DoubleBarrelShotgun : MonoBehaviour
                 }
                 else if (impactPrefab != null)
                 {
+                    if (hit.rigidbody != null)
+                        hit.rigidbody.AddForceAtPosition(dir * 50f, hit.point, ForceMode.Impulse);
                     var fx = Instantiate(impactPrefab, hit.point, Quaternion.LookRotation(hit.normal));
                     Destroy(fx, 4f);
                 }
 
-                if (hit.rigidbody != null)
-                    hit.rigidbody.AddForceAtPosition(dir * 50f, hit.point, ForceMode.Impulse);
 
 #if UNITY_EDITOR
                 rayEnd = hit.point;
