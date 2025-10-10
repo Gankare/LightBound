@@ -11,6 +11,7 @@ public class DoubleBarrelShotgun : MonoBehaviour
     public ParticleSystem muzzleFlashLeft;
     public ParticleSystem muzzleFlashRight;
     public GameObject impactPrefab;
+    public GameObject bloodPrefab;
     public AudioClip fireSound;
     public AudioClip reloadSound;
     public Animator animator;
@@ -106,16 +107,19 @@ public class DoubleBarrelShotgun : MonoBehaviour
             if (Physics.Raycast(muzzle.position, dir, out RaycastHit hit, range))
             {
                 var health = hit.collider.GetComponent<Health>();
-                if (health != null) health.TakeDamage(damagePerPellet);
-
-                if (hit.rigidbody != null)
-                    hit.rigidbody.AddForceAtPosition(dir * 50f, hit.point, ForceMode.Impulse);
-
-                if (impactPrefab != null)
+                if (health != null)
+                {
+                    health.TakeDamage(damagePerPellet);
+                    var fx = Instantiate(bloodPrefab, hit.point, Quaternion.LookRotation(hit.normal));
+                }
+                else if (impactPrefab != null)
                 {
                     var fx = Instantiate(impactPrefab, hit.point, Quaternion.LookRotation(hit.normal));
                     Destroy(fx, 4f);
                 }
+
+                if (hit.rigidbody != null)
+                    hit.rigidbody.AddForceAtPosition(dir * 50f, hit.point, ForceMode.Impulse);
 
 #if UNITY_EDITOR
                 rayEnd = hit.point;

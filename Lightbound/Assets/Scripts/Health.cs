@@ -2,20 +2,26 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public float health = 1;
+    private bool dead = false;
 
     public void TakeDamage(float damagePerPellet)
     {
+        health -= damagePerPellet;
+        CheckHealth();
+    }
 
+    public void CheckHealth()
+    {
+        if (health < 0 && !dead)
+        {
+            Death();
+        }
+
+    }
+    private void Death()
+    {
+        dead = true;
+        //Remove movement and dissolveä
     }
 }
