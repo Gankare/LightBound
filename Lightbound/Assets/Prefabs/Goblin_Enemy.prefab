@@ -780,9 +780,9 @@ GameObject:
   - component: {fileID: 3516944455586123648}
   - component: {fileID: 1464875703493254944}
   - component: {fileID: 3443534461188046767}
-  - component: {fileID: 4344328267701929724}
   - component: {fileID: 3459920686090390176}
   - component: {fileID: 7015913164815430043}
+  - component: {fileID: 3058718984316453778}
   m_Layer: 8
   m_Name: Goblin_Enemy
   m_TagString: Untagged
@@ -900,28 +900,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 80
   m_CollisionDetection: 1
---- !u!64 &4344328267701929724
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2513755032221961906}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3375319798596084856, guid: 90c6ce505c373e8409e09e7d30d114af, type: 3}
 --- !u!195 &3459920686090390176
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1041,6 +1019,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!136 &3058718984316453778
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2513755032221961906}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.35
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.44238436, z: 0}
 --- !u!1 &2643196697902970839
 GameObject:
   m_ObjectHideFlags: 0
@@ -1632,7 +1633,7 @@ SkinnedMeshRenderer:
   m_SortingOrder: 0
   serializedVersion: 2
   m_Quality: 0
-  m_UpdateWhenOffscreen: 0
+  m_UpdateWhenOffscreen: 1
   m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: -5238830062333367321, guid: 57042031a6a8508449996574d963fd9c, type: 3}
   m_Bones:
