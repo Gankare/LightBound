@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using System.Collections;
 
 public class GoblinAI : MonoBehaviour
 {
@@ -55,7 +56,7 @@ public class GoblinAI : MonoBehaviour
         if (distanceToWalkPoint.magnitude < 1f)
             walkPointSet = false;
 
-        animator?.SetBool("Walking", true);
+        animator?.SetBool("Walking", agent.velocity.magnitude > 0.1f); // Check if the agent is moving
     }
 
     private void SearchWalkPoint()
@@ -73,12 +74,12 @@ public class GoblinAI : MonoBehaviour
     private void ChasePlayer()
     {
         agent.SetDestination(player.position);
-        animator?.SetBool("Walking", true);
+        animator?.SetBool("Walking", agent.velocity.magnitude > 0.1f); // Check if the agent is moving
     }
 
     private void AttackPlayer()
     {
-        agent.SetDestination(transform.position);
+        agent.isStopped = true; // Stop movement
         transform.LookAt(player);
 
         if (!alreadyAttacked)
@@ -104,7 +105,7 @@ public class GoblinAI : MonoBehaviour
                     cooldown = 1f; // fallback
             }
 
-            Invoke(nameof(ResetAttack), cooldown);
+            StartCoroutine(ResetAttackAfterCooldown(cooldown));
         }
     }
 
@@ -120,9 +121,11 @@ public class GoblinAI : MonoBehaviour
         return null;
     }
 
-    private void ResetAttack()
+    private IEnumerator ResetAttackAfterCooldown(float cooldown)
     {
+        yield return new WaitForSeconds(cooldown);
         alreadyAttacked = false;
+        agent.isStopped = false; // Resume movement
     }
 
     private void OnDrawGizmosSelected()
