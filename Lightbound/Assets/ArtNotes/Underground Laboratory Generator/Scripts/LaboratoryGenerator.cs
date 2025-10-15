@@ -71,8 +71,8 @@ namespace ArtNotes.UndergroundLaboratoryGenerator
 
                 } while (collided && lim > 0);
 
-                selectedPrefab.TriggerBox.enabled = true; // ВКЛЮЧИЛ
-
+                selectedPrefab.TriggerBox.enabled = false; // Peng
+                StartRoom.TriggerBox.enabled = false;
                 if (lim > 0)
                 {
                     roomsLeft--;

@@ -145,7 +145,7 @@ public class FirstPersonController : MonoBehaviour
             var hit = new RaycastHit();
             if (Physics.Raycast(Camera.main.transform.position,
                                 Camera.main.transform.forward,
-                                out hit, 1f))
+                                out hit, 1.5f))
             {
                 var dc = hit.collider.GetComponent<DoorController>();
                 if (dc) dc.TryOpen();
