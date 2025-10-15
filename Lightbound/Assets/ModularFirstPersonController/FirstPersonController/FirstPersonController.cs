@@ -140,6 +140,17 @@ public class FirstPersonController : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            var hit = new RaycastHit();
+            if (Physics.Raycast(Camera.main.transform.position,
+                                Camera.main.transform.forward,
+                                out hit, 1f))
+            {
+                var dc = hit.collider.GetComponent<DoorController>();
+                if (dc) dc.TryOpen();
+            }
+        }
         #region Camera
 
         // Control camera movement
