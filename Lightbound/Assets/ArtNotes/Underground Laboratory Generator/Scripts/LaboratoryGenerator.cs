@@ -13,7 +13,7 @@ namespace ArtNotes.UndergroundLaboratoryGenerator
         public GameObject InsteadDoor;
         public GameObject[] DoorPrefabs;
         public Cell[] CellPrefabs;
-
+        public GameObject player;
 
 
         private void Start()
@@ -29,7 +29,6 @@ namespace ArtNotes.UndergroundLaboratoryGenerator
             for (int i = 0; i < StartRoom.Exits.Length; i++)
                 CreatedExits.Add(StartRoom.Exits[i].transform);
             StartRoom.TriggerBox.enabled = true;
-
             int limit = 1000, roomsLeft = RoomCount - 1;
             while (limit > 0 && roomsLeft > 0)
             {
@@ -40,9 +39,9 @@ namespace ArtNotes.UndergroundLaboratoryGenerator
                 int lim = 100;
                 bool collided;
                 Transform selectedExit;
-                Transform createdExit; // из списка созданных входов
+                Transform createdExit; 
 
-                selectedPrefab.TriggerBox.enabled = false; // чтобы сам себя не проверял на наличие нахлеста ВЫКЛЮЧИЛ
+                selectedPrefab.TriggerBox.enabled = false;
 
                 do
                 {
@@ -53,11 +52,11 @@ namespace ArtNotes.UndergroundLaboratoryGenerator
 
                     // rotation
                     float shiftAngle = createdExit.eulerAngles.y + 180 - selectedExit.eulerAngles.y;
-                    selectedPrefab.transform.Rotate(new Vector3(0, shiftAngle, 0)); // выходы повернуты друг напротив друга
+                    selectedPrefab.transform.Rotate(new Vector3(0, shiftAngle, 0)); 
 
                     // position
                     Vector3 shiftPosition = createdExit.position - selectedExit.position;
-                    selectedPrefab.transform.position += shiftPosition; // выходы состыковались
+                    selectedPrefab.transform.position += shiftPosition; 
 
                     // check
                     Vector3 center = selectedPrefab.transform.position + selectedPrefab.TriggerBox.center.z * selectedPrefab.transform.forward
@@ -90,6 +89,13 @@ namespace ArtNotes.UndergroundLaboratoryGenerator
                 else
                     DestroyImmediate(selectedPrefab.gameObject);
 
+
+                // --- player placement (same frame) ---
+                Bounds roomBounds = new Bounds(StartRoom.transform.position, Vector3.zero);
+                Collider[] roomCols = StartRoom.GetComponentsInChildren<Collider>();
+                foreach (var c in roomCols) roomBounds.Encapsulate(c.bounds);
+                Vector3 spawnPos = roomBounds.center + Vector3.up * 1.6f;
+                player.transform.position = spawnPos;   // instant move
                 yield return null;
             }
 
