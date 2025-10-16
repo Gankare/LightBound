@@ -6,7 +6,8 @@ using System.Collections;
 public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 100;
-    public Image damagedImage;
+    public Image damagedImageRed;
+    public Image damagedImageBlack;
     private int currentHealth;
     public float regenRate = 2f;          
     public float regenDelay = 5f;         
@@ -51,22 +52,31 @@ public class PlayerHealth : MonoBehaviour
 
     void UpdateHealthVisuals()
     {
-        if (damagedImage != null)
+        if (damagedImageBlack != null)
         {
             if (currentHealth < maxHealth)
             {
-                float alphaValue = 1f - (float)currentHealth / maxHealth;
-                damagedImage.color = new Color(damagedImage.color.r,
-                                               damagedImage.color.g,
-                                               damagedImage.color.b,
-                                               alphaValue);
+                float alphaValueRed = 1f - (float)currentHealth / maxHealth;
+                float alphaValueBlack = 0.85f - (float)currentHealth / maxHealth;
+                damagedImageRed.color = new Color(damagedImageRed.color.r,
+                                               damagedImageRed.color.g,
+                                               damagedImageRed.color.b,
+                                               alphaValueRed);
+                damagedImageBlack.color = new Color(damagedImageBlack.color.r,
+                                               damagedImageBlack.color.g,
+                                               damagedImageBlack.color.b,
+                                               alphaValueBlack);
             }
             else
             {
                 float alphaValue = 0;
-                damagedImage.color = new Color(damagedImage.color.r,
-                                               damagedImage.color.g,
-                                               damagedImage.color.b,
+                damagedImageRed.color = new Color(damagedImageRed.color.r,
+                                               damagedImageRed.color.g,
+                                               damagedImageRed.color.b,
+                                               alphaValue);
+                damagedImageBlack.color = new Color(damagedImageBlack.color.r,
+                                               damagedImageBlack.color.g,
+                                               damagedImageBlack.color.b,
                                                alphaValue);
             }
         }

@@ -97,7 +97,7 @@ namespace ArtNotes.UndergroundLaboratoryGenerator
                 Bounds roomBounds = new Bounds(StartRoom.transform.position, Vector3.zero);
                 Collider[] roomCols = StartRoom.GetComponentsInChildren<Collider>();
                 foreach (var c in roomCols) roomBounds.Encapsulate(c.bounds);
-                Vector3 spawnPos = roomBounds.center + Vector3.up * 1.6f;
+                Vector3 spawnPos = roomBounds.center;
                 player.transform.position = spawnPos;   // instant move
                 yield return null;
             }
@@ -109,7 +109,7 @@ namespace ArtNotes.UndergroundLaboratoryGenerator
                 DestroyImmediate(CreatedExits[i].gameObject);
             }
 
-            Debug.Log("Finished " + Time.time);
+            //Debug.Log("Finished " + Time.time);
         }
     }
 }
