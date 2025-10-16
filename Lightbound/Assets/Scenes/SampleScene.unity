@@ -4289,7 +4289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   damagedImage: {fileID: 975422236}
-  regenRate: 2
+  regenRate: 5
   regenDelay: 5
 --- !u!1 &8589403532870616512
 GameObject:
