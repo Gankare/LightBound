@@ -163,6 +163,7 @@ MonoBehaviour:
   - {fileID: 1755822898871276806, guid: c36709b71b7863a4a85105c5f009b093, type: 3}
   - {fileID: 8098944512544985556, guid: c02f45ee349fd1a478452aeb0c528289, type: 3}
   CellPrefabs:
+  - {fileID: 7017778445130184685, guid: 6f9bd1cb53a9db041bbdcf575b300608, type: 3}
   - {fileID: 7017778445130184685, guid: a8b9c6f9a89711d4da799da51e7037ce, type: 3}
   - {fileID: 1670828366126291275, guid: 6e74f84588c14e44db92ce4a58c37469, type: 3}
   - {fileID: 8044564116768356952, guid: 08a101170a80091489cedf4e31d15cc9, type: 3}
@@ -191,6 +192,7 @@ MonoBehaviour:
   - {fileID: 7218385072039734495, guid: 81a0bbacb3e98c044800fef7e60a62a5, type: 3}
   - {fileID: 3745941486471605408, guid: 47c9e70439757384ebad1758ec8c3148, type: 3}
   - {fileID: 5609003998976228916, guid: 18cbb28446f3b6649bd4f9c45e29d6a5, type: 3}
+  - {fileID: 7017778445130184685, guid: 6f9bd1cb53a9db041bbdcf575b300608, type: 3}
   player: {fileID: 8108740199441892553}
 --- !u!4 &13080189
 Transform:
@@ -1291,7 +1293,7 @@ Transform:
   m_GameObject: {fileID: 804096390}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.85, z: 44.6}
+  m_LocalPosition: {x: 0, y: 0.85, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1968,7 +1970,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2513755032221961906, guid: f91483c90bf69be498b811b6d5fb857d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3560835082808195505, guid: f91483c90bf69be498b811b6d5fb857d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3373,7 +3375,7 @@ Transform:
   m_GameObject: {fileID: 3355152346333637526}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.85, z: 44.6}
+  m_LocalPosition: {x: 0, y: 0.85, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3452,7 +3454,7 @@ Transform:
   m_GameObject: {fileID: 8108740199441892553}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 44.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3701,6 +3703,10 @@ PrefabInstance:
     - target: {fileID: 2513755032221961906, guid: f91483c90bf69be498b811b6d5fb857d, type: 3}
       propertyPath: m_Name
       value: Goblin_Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2513755032221961906, guid: f91483c90bf69be498b811b6d5fb857d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3560835082808195505, guid: f91483c90bf69be498b811b6d5fb857d, type: 3}
       propertyPath: m_LocalPosition.x

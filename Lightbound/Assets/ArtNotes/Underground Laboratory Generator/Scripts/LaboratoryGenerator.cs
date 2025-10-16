@@ -25,7 +25,7 @@ namespace ArtNotes.UndergroundLaboratoryGenerator
         private IEnumerator StartGeneration()
         {
             List<Transform> CreatedExits = new List<Transform>();
-            Cell StartRoom = Instantiate(CellPrefabs[Random.Range(0, CellPrefabs.Length)], Vector3.zero, Quaternion.identity, transform);
+            Cell StartRoom = Instantiate(CellPrefabs[0], Vector3.zero, Quaternion.identity, transform);
             for (int i = 0; i < StartRoom.Exits.Length; i++)
                 CreatedExits.Add(StartRoom.Exits[i].transform);
             StartRoom.TriggerBox.enabled = true;
@@ -33,8 +33,11 @@ namespace ArtNotes.UndergroundLaboratoryGenerator
             while (limit > 0 && roomsLeft > 0)
             {
                 limit--;
-
-                Cell selectedPrefab = Instantiate(CellPrefabs[Random.Range(0, CellPrefabs.Length)], Vector3.zero, Quaternion.identity, transform);
+                Cell selectedPrefab;
+                if (roomsLeft == 1) 
+                    selectedPrefab = Instantiate(CellPrefabs[CellPrefabs.Length - 1], Vector3.zero, Quaternion.identity, transform);
+                else
+                    selectedPrefab = Instantiate(CellPrefabs[Random.Range(1, CellPrefabs.Length - 2)], Vector3.zero, Quaternion.identity, transform);
 
                 int lim = 100;
                 bool collided;
