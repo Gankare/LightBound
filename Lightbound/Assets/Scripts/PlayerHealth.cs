@@ -55,7 +55,7 @@ public class PlayerHealth : MonoBehaviour
         {
             if (currentHealth < maxHealth)
             {
-                float alphaValue = 1.1f - (float)currentHealth / maxHealth;
+                float alphaValue = 1f - (float)currentHealth / maxHealth;
                 damagedImage.color = new Color(damagedImage.color.r,
                                                damagedImage.color.g,
                                                damagedImage.color.b,
