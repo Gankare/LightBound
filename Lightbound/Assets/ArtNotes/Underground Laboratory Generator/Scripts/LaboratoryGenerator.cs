@@ -92,7 +92,7 @@ namespace ArtNotes.UndergroundLaboratoryGenerator
                 else
                     DestroyImmediate(selectedPrefab.gameObject);
 
-
+                yield return null;
                 // --- player placement (same frame) ---
                 Bounds roomBounds = new Bounds(StartRoom.transform.position, Vector3.zero);
                 Collider[] roomCols = StartRoom.GetComponentsInChildren<Collider>();

@@ -1301,7 +1301,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.083333336
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: ec9af2a158409ab40a5850b47a4253e0, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: f77a9f1c4e4bea543b5c1840b1f91526, type: 2}
   m_BuildHeightMesh: 1
 --- !u!114 &7017778445130184685
 MonoBehaviour:
@@ -1332,7 +1332,7 @@ GameObject:
   - component: {fileID: 5593026758931265000}
   - component: {fileID: 6443664841768818575}
   - component: {fileID: 841726549986977364}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PolyShape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
