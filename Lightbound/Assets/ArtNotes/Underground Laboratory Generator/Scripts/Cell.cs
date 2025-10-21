@@ -2,16 +2,17 @@
 
 namespace ArtNotes.UndergroundLaboratoryGenerator
 {
-    [RequireComponent(typeof(BoxCollider))]
+    //[RequireComponent(typeof(BoxCollider))]
     public class Cell : MonoBehaviour
     {
-        [HideInInspector]
         public BoxCollider TriggerBox;
+        [HideInInspector]
         public GameObject[] Exits;
 
         private void Awake()
         {
-            TriggerBox = GetComponent<BoxCollider>();
+            if (TriggerBox == null) 
+                TriggerBox = GetComponent<BoxCollider>();
             TriggerBox.isTrigger = true;
         }
     }

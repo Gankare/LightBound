@@ -25,7 +25,7 @@ namespace ArtNotes.UndergroundLaboratoryGenerator
         private IEnumerator StartGeneration()
         {
             List<Transform> CreatedExits = new List<Transform>();
-            Cell StartRoom = Instantiate(CellPrefabs[0], Vector3.zero, Quaternion.identity, transform);
+            Cell StartRoom = Instantiate(CellPrefabs[0], new Vector3 (100, 0, 100), Quaternion.identity, transform);
             for (int i = 0; i < StartRoom.Exits.Length; i++)
                 CreatedExits.Add(StartRoom.Exits[i].transform);
             StartRoom.TriggerBox.enabled = true;

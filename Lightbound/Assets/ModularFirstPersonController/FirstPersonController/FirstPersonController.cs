@@ -110,9 +110,9 @@ public class FirstPersonController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        crosshairObject = GetComponentInChildren<Image>();
-        crosshairObject.sprite = crosshairImage;
-        crosshairObject.color = crosshairColor;
+        //crosshairObject = GetComponentInChildren<Image>();
+        //crosshairObject.sprite = crosshairImage;
+        //crosshairObject.color = crosshairColor;
         playerCamera.fieldOfView = fov;
         originalScale = transform.localScale;
         jointOriginalPos = joint.localPosition;
