@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8289256520699986648}
   - component: {fileID: 690644880330006470}
   - component: {fileID: 53278491347611175}
+  - component: {fileID: 5063989071739887609}
   m_Layer: 0
   m_Name: Wall desk 1
   m_TagString: Untagged
@@ -26,12 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 53278491347611172}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6154841712632176604}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8289256520699986648
 MeshFilter:
@@ -52,10 +54,15 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -80,6 +87,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &53278491347611175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,6 +110,27 @@ MonoBehaviour:
   - {r: 0.9161581, g: 1, b: 0.9019608, a: 1}
   - {r: 0.9049057, g: 0.9019608, b: 1, a: 1}
   - {r: 1, g: 0.99964947, b: 0.9019608, a: 1}
+--- !u!65 &5063989071739887609
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53278491347611172}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3155594, y: 1, z: 0.25}
+  m_Center: {x: -0.00000044703484, y: 0, z: 0.125}
 --- !u!1 &176746269310336087
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,6 +143,7 @@ GameObject:
   - component: {fileID: 8690937497893327701}
   - component: {fileID: 8947451116334120609}
   - component: {fileID: 176746269310336086}
+  - component: {fileID: 8148404100396182753}
   m_Layer: 0
   m_Name: Wall desk 2
   m_TagString: Untagged
@@ -128,12 +158,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 176746269310336087}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6154841712632176604}
-  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8690937497893327701
 MeshFilter:
@@ -154,10 +185,15 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -182,6 +218,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &176746269310336086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,6 +241,27 @@ MonoBehaviour:
   - {r: 0.9161581, g: 1, b: 0.9019608, a: 1}
   - {r: 0.9049057, g: 0.9019608, b: 1, a: 1}
   - {r: 1, g: 0.99964947, b: 0.9019608, a: 1}
+--- !u!65 &8148404100396182753
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176746269310336087}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3155591, y: 1, z: 0.25}
+  m_Center: {x: -0.00000035762787, y: 0, z: 0.125}
 --- !u!1 &6040993698458780736
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,6 +274,7 @@ GameObject:
   - component: {fileID: 8490078507798943889}
   - component: {fileID: 3051060587830105279}
   - component: {fileID: 6040993698458780739}
+  - component: {fileID: 7264646984354592487}
   m_Layer: 0
   m_Name: Wall desk 6
   m_TagString: Untagged
@@ -230,12 +289,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6040993698458780736}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6154841712632176604}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8490078507798943889
 MeshFilter:
@@ -256,10 +316,15 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -284,6 +349,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &6040993698458780739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,6 +372,27 @@ MonoBehaviour:
   - {r: 0.9161581, g: 1, b: 0.9019608, a: 1}
   - {r: 0.9049057, g: 0.9019608, b: 1, a: 1}
   - {r: 1, g: 0.99964947, b: 0.9019608, a: 1}
+--- !u!65 &7264646984354592487
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6040993698458780736}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.1840031, y: 1, z: 0.25000006}
+  m_Center: {x: 0, y: 0.018239439, z: 0.106760584}
 --- !u!1 &6154841712632176605
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,9 +417,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6154841712632176605}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.638718, y: 1.29, z: 10.116}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3912968857844551739}
   - {fileID: 2148090424068844107}
@@ -342,7 +431,6 @@ Transform:
   - {fileID: 4607901423344750637}
   - {fileID: 7697293727833071305}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6154841712632176607
 MonoBehaviour:
@@ -374,6 +462,7 @@ GameObject:
   - component: {fileID: 324675205054012683}
   - component: {fileID: 8773665736201442715}
   - component: {fileID: 6538416515688091465}
+  - component: {fileID: 7697000191517053486}
   m_Layer: 0
   m_Name: Wall desk 5
   m_TagString: Untagged
@@ -388,12 +477,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6538416515688091462}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.054}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6154841712632176604}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &324675205054012683
 MeshFilter:
@@ -414,10 +504,15 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -442,6 +537,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &6538416515688091465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,6 +560,27 @@ MonoBehaviour:
   - {r: 0.9161581, g: 1, b: 0.9019608, a: 1}
   - {r: 0.9049057, g: 0.9019608, b: 1, a: 1}
   - {r: 1, g: 0.99964947, b: 0.9019608, a: 1}
+--- !u!65 &7697000191517053486
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6538416515688091462}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.6292331, y: 1, z: 0.25000003}
+  m_Center: {x: 0.00000035762787, y: -0.052070156, z: 0.17707013}
 --- !u!1 &6681412535870326850
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,6 +593,7 @@ GameObject:
   - component: {fileID: 4726809967624184673}
   - component: {fileID: 5774975791756982866}
   - component: {fileID: 6681412535870326853}
+  - component: {fileID: 7902712754071186409}
   m_Layer: 0
   m_Name: Wall desk 7
   m_TagString: Untagged
@@ -490,12 +608,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6681412535870326850}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6154841712632176604}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4726809967624184673
 MeshFilter:
@@ -516,10 +635,15 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -544,6 +668,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &6681412535870326853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -566,6 +691,27 @@ MonoBehaviour:
   - {r: 0.9161581, g: 1, b: 0.9019608, a: 1}
   - {r: 0.9049057, g: 0.9019608, b: 1, a: 1}
   - {r: 1, g: 0.99964947, b: 0.9019608, a: 1}
+--- !u!65 &7902712754071186409
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6681412535870326850}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3155591, y: 1, z: 0.25000003}
+  m_Center: {x: 0.000000029802322, y: -0.018239513, z: 0.14323948}
 --- !u!1 &7351357245331567956
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,6 +724,7 @@ GameObject:
   - component: {fileID: 379716600657868763}
   - component: {fileID: 1798971806130664642}
   - component: {fileID: 7351357245331567959}
+  - component: {fileID: 8237176389631259307}
   m_Layer: 0
   m_Name: Wall desk 3
   m_TagString: Untagged
@@ -592,12 +739,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7351357245331567956}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6154841712632176604}
-  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &379716600657868763
 MeshFilter:
@@ -618,10 +766,15 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -646,6 +799,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &7351357245331567959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -668,6 +822,27 @@ MonoBehaviour:
   - {r: 0.9161581, g: 1, b: 0.9019608, a: 1}
   - {r: 0.9049057, g: 0.9019608, b: 1, a: 1}
   - {r: 1, g: 0.99964947, b: 0.9019608, a: 1}
+--- !u!65 &8237176389631259307
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7351357245331567956}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.1840031, y: 1, z: 0.25}
+  m_Center: {x: 0.00000008940697, y: 0, z: 0.125}
 --- !u!1 &8666473046229663769
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,6 +855,7 @@ GameObject:
   - component: {fileID: 2586588690017871036}
   - component: {fileID: 6114481488045807890}
   - component: {fileID: 8666473046229663768}
+  - component: {fileID: 4080049888262587644}
   m_Layer: 0
   m_Name: Wall desk 4
   m_TagString: Untagged
@@ -694,12 +870,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8666473046229663769}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6154841712632176604}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2586588690017871036
 MeshFilter:
@@ -720,10 +897,15 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -748,6 +930,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &8666473046229663768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -770,3 +953,24 @@ MonoBehaviour:
   - {r: 0.9161581, g: 1, b: 0.9019608, a: 1}
   - {r: 0.9049057, g: 0.9019608, b: 1, a: 1}
   - {r: 1, g: 0.99964947, b: 0.9019608, a: 1}
+--- !u!65 &4080049888262587644
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8666473046229663769}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3155591, y: 1, z: 0.25}
+  m_Center: {x: 0.00000011920929, y: 0, z: 0.125}
