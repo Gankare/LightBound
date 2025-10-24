@@ -54,7 +54,7 @@ public class DoubleBarrelShotgun : MonoBehaviour
     {
         if (isReloading) return;
 
-        if ((Input.GetButtonDown("Fire1") || Input.GetMouseButtonDown(0)) && Time.time - lastFireTime >= fireRate && Time.time > 1)
+        if (Input.GetMouseButtonDown(0) && Time.time - lastFireTime >= fireRate && Time.time > 1)
         {
             TryFire();
         }

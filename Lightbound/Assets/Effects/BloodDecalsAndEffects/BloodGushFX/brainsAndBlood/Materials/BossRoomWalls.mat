@@ -178,7 +178,7 @@ Material:
     - _Dirt_Top: 0
     - _DstBlend: 0
     - _EmissionScaleUI: 0.48
-    - _GlossMapScale: 0.1
+    - _GlossMapScale: 0
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
@@ -187,7 +187,7 @@ Material:
     - _Norm2Strength: 1
     - _Norm3Strength: 1
     - _OcclusionStrength: 1
-    - _Parallax: 0.005
+    - _Parallax: 0.08
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
